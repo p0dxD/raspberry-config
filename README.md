@@ -1,10 +1,10 @@
 # Starter configuration
 The following scripts must be run in the following order:
-- [Setup](#setup.sh)
-- [Pre-kube](#pre-kube.sh)
-- [Kube](#kube.sh)
-- [Post-kube](#post-kube.sh)
-- [Network-config](#network-config.sh)
+- [Setup](#setupsh)
+- [Pre-kube](#pre-kubesh)
+- [Kube](#kubesh)
+- [Post-kube](#post-kubesh)
+- [Network-config](#network-configsh)
 
 If all steps work as expected the workers can join the main cluster
 ``` 
