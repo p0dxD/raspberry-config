@@ -1,2 +1,6 @@
-# raspberry-config
-Stores configuration for raspberry pi
+# Starter configuration
+Upgrades, and installs the following:
+- git
+- sdkman
+- docker
+- zip
