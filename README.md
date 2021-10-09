@@ -1,10 +1,11 @@
 # Starter configuration
 The following scripts must be run in the following order:
 - [Setup](#setupsh)
-- [Pre-kube](#pre-kubesh)
-- [Kube](#kubesh)
-- [Post-kube](#post-kubesh)
-- [Network-config](#network-configsh)
+- [Kubernetes](#kubernetes)
+    - [Pre-kube](#pre-kubesh)
+    - [Kube](#kubesh)
+    - [Post-kube](#post-kubesh)
+    - [Network-config](#network-configsh)
 
 If all steps work as expected the workers can join the main cluster
 ``` 
@@ -16,7 +17,7 @@ Upgrades, and installs the following:
 - sdkman
 - docker
 - zip
-
+# Kubernetes
 ## pre-kube.sh
 Sets the initial configuration needed for kubernetes to operate corrently:
 * It updates _/boot/cmdline.txt_, and _/etc/docker/daemon.json_
