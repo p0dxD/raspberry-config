@@ -1,4 +1,6 @@
 #!/bin/bash
+EMAIL="jose0797@gmail.com"
+NAME="Jose"
 
 # Get latest updates
 yes | sudo apt upgrade
@@ -13,6 +15,8 @@ fi
 if ! command -v git &> /dev/null
 then
     yes | sudo apt install git
+    git config --global user.email $EMAIL
+    git config --global user.name $NAME
 fi
 
 # Install latest docker
