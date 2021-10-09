@@ -1,5 +1,5 @@
 # Starter configuration
-The following scripts must be run in the following order:
+The following scripts must be run in the following order (run in sudo):
 - [Setup](#setupsh)
 - [Kubernetes](#kubernetes)
     - [Pre-kube](#pre-kubesh)
@@ -51,4 +51,5 @@ Once tools are ready it pulls the needed configs
 * Sets auto-complete
 
 ## network-config.sh
+Gets and creates the needed configuration
 
