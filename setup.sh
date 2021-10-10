@@ -1,7 +1,7 @@
 #!/bin/bash
 EMAIL="jose0797@gmail.com"
 NAME="Jose"
-
+LOWER_USER="$USER"
 # Get latest updates
 yes | sudo apt upgrade
 
@@ -26,7 +26,7 @@ then
     sudo sh get-docker.sh
     # Configure docker
     echo $USER
-    sudo usermod -aG docker $USER
+    sudo usermod -aG docker $LOWER_USER
     docker version
 fi
 
@@ -34,6 +34,6 @@ fi
 if [ ! $(echo $SDKMAN_DIR) ] 
 then
     curl -s "https://get.sdkman.io" | bash
-    source "$HOME/.sdkman/bin/sdkman-init.sh"
+    sudo -u $LOWER_USER source "$HOME/.sdkman/bin/sdkman-init.sh"
     sdk version
 fi
