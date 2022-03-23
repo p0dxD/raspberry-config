@@ -20,5 +20,5 @@ mkdir -p /etc/cni/net.d
 
 # Network backend for arm.
 echo "Setting up needed networking tools."
-curl -sL https://github.com/containernetworking/plugins/releases/download/v0.7.5/cni-plugins-arm-v0.7.5.tgz | \
+curl -sL https://github.com/containernetworking/plugins/releases/download/v1.1.1/cni-plugins-linux-arm64-v1.1.1.tgz | \
 tar zxvf - -C /opt/cni/bin/ ./portmap
