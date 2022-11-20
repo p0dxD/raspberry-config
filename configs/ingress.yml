@@ -1,0 +1,40 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: minimal-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+    kubernetes.io/ingress.class: "nginx"       # <- This is important
+spec:
+  # ingressClassName: nginx-example
+  rules:
+  - host: "jenkins.joserod.space"
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: jenkins-service
+            port:
+              number: 8080
+  - host: "joserod.space"
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: ui-joserod-space
+            port:
+              number: 80
+  # - host: "mealie.myneighbor.community"
+  #   http:
+  #     paths:
+  #     - path: /
+  #       pathType: Prefix
+  #       backend:
+  #         service:
+  #           name: mealie
+  #           port:
+  #             number: 80
